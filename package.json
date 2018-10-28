@@ -1,0 +1,23 @@
+{
+  "name": "new_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node keystone.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeslo/new_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeslo/new_website/issues"
+  },
+  "homepage": "https://github.com/codeslo/new_website#readme",
+  "dependencies": {
+    "keystone": "^4.0.0"
+  }
+}
