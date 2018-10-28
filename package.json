@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/codeslo/new_website#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "keystone": "^4.0.0"
   }
 }
