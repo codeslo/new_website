@@ -20,3 +20,7 @@
 .testi-container .owl-stage {
     padding: 0;
 }
+
+#footer .footer-widgets-wrap {
+    padding: 40px 0;
+}
