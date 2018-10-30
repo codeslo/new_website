@@ -1,0 +1,33 @@
+.line {
+    margin: 30px 0;
+}
+
+#slider p {
+    font-weight: 500;
+    color: #333333;
+    text-shadow: none;
+}
+
+.testi-image, .testi-image img {
+    height: 100px;
+    width: 100px;    
+}
+
+.testimonial {
+    min-height: 140px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+}
+
+.testi-container .owl-stage {
+    padding: 0;
+}
+
+#footer .footer-widgets-wrap {
+    padding: 40px 0;
+}
+
+.si-meetup:hover,
+.si-colored.si-meetup { background-color: #F5405F !important; }
