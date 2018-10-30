@@ -1,3 +1,7 @@
+.line {
+    margin: 30px 0;
+}
+
 #slider p {
     font-weight: 500;
     color: #333333;
@@ -24,3 +28,6 @@
 #footer .footer-widgets-wrap {
     padding: 40px 0;
 }
+
+.si-meetup:hover,
+.si-colored.si-meetup { background-color: #F5405F !important; }
