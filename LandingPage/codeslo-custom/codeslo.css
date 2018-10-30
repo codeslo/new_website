@@ -3,3 +3,20 @@
     color: #333333;
     text-shadow: none;
 }
+
+.testi-image, .testi-image img {
+    height: 100px;
+    width: 100px;    
+}
+
+.testimonial {
+    min-height: 140px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+}
+
+.testi-container .owl-stage {
+    padding: 0;
+}
