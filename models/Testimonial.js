@@ -11,22 +11,9 @@ Testimonial.add({
         type: String
     },
     image: {
-        type: Types.CloudinaryImage,
-        generateFilename: function (file, attemptNumber, callback) {
-            var originalname = file.originalname;
-            var filenameWithoutExtension = originalname.substring(0, originalname.lastIndexOf('.'));
-            var timestamp = new Date().getTime();
-            return `${filenameWithoutExtension}-${timestamp}`;
-        },
-        whenExists: 'overwrite',
-        autoCleanup : true,
-        select : true
+        type: keystone.Field.Types.CloudinaryImage,
     }
 });
 
-Testimonial.schema.virtual('canAccessKeystone').get(function () {
-    return true;
-});
 
-Testimonial.defaultColumns = 'id, displayName, email';
 Testimonial.register();
