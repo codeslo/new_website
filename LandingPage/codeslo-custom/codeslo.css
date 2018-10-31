@@ -22,7 +22,12 @@ a.anchor {
 
 .testimonial {
     min-height: 140px;
-    padding: 30px 60px;
+    padding: 30px;
+    margin: 0 60px;
+}
+
+.owl-nav button {
+    margin: 60px;
 }
 
 .testimonial p {
@@ -31,6 +36,10 @@ a.anchor {
 
 .testi-container .owl-stage {
     padding: 0;
+}
+
+.testi-content {
+    padding-left: 20px;
 }
 
 #partners h4 {
