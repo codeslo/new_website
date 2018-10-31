@@ -57,3 +57,29 @@ a.anchor {
 
 .si-meetup:hover,
 .si-colored.si-meetup { background-color: #F5405F !important; }
+
+@media(max-width: 768px){
+    .testi-image, .testi-image img {
+        float: none;
+        height: 40%;
+        width: 40%; 
+        margin: 0 auto 10px;   
+    }
+    
+    .testimonial {        
+        padding: 20px;
+        margin: 0;
+        
+    }
+    .testimonial p {
+        font-size: .875rem;
+    }
+    
+    .owl-nav button {
+        margin: 0;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+}
