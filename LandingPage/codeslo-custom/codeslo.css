@@ -16,12 +16,13 @@ a.anchor {
 }
 
 .testi-image, .testi-image img {
-    height: 100px;
-    width: 100px;    
+    height: 12%;
+    width: 12%;    
 }
 
 .testimonial {
     min-height: 140px;
+    padding: 30px 60px;
 }
 
 .testimonial p {
@@ -30,6 +31,10 @@ a.anchor {
 
 .testi-container .owl-stage {
     padding: 0;
+}
+
+#partners h4 {
+    color: #777;
 }
 
 #footer .footer-widgets-wrap {
