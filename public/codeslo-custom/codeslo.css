@@ -1,0 +1,85 @@
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+.line {
+    margin: 30px 0;
+}
+
+#header .container {
+    max-width: 100% !important;
+}
+
+#slider p {
+    font-weight: 500;
+    color: #333333;
+    text-shadow: none;
+}
+
+.testi-image, .testi-image img {
+    height: 12%;
+    width: 12%;    
+}
+
+.testimonial {
+    min-height: 140px;
+    padding: 30px;
+    margin: 0 60px;
+}
+
+.owl-nav button {
+    margin: 60px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+}
+
+.testi-container .owl-stage {
+    padding: 0;
+}
+
+.testi-content {
+    padding-left: 20px;
+}
+
+#partners h4 {
+    color: #777;
+    margin: 0;
+}
+
+#footer .footer-widgets-wrap {
+    padding: 40px 0;
+}
+
+.si-meetup:hover,
+.si-colored.si-meetup { background-color: #F5405F !important; }
+
+@media(max-width: 768px){
+    .testi-image, .testi-image img {
+        float: none;
+        height: 40%;
+        width: 40%; 
+        margin: 0 auto 10px;   
+    }
+    
+    .testimonial {        
+        padding: 20px;
+        margin: 0;
+        
+    }
+    .testimonial p {
+        font-size: .875rem;
+    }
+    
+    .owl-nav button {
+        margin: 0;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+}
