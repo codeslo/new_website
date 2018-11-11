@@ -16,6 +16,9 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
+	<!-- Radio Checkbox Plugin -->
+	<link rel="stylesheet" href="css/components/radio-checkbox.css" type="text/css" />
+
 	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
 	<link rel="stylesheet" href="codeslo-custom/codeslo.css" type="text/css"/>
 	<link rel="stylesheet" href="codeslo-custom/codeslo-colors.css" type="text/css" />
@@ -46,7 +49,7 @@
 					============================================= -->					
 					<nav id="primary-menu">
 						<ul>
-							<li class="current"><a href="index.html"><div>Home</div></a>		
+							<li class="current"><a href="/"><div>Home</div></a>		
 							</li>
 							<li><a href="#services"><div>Services</div></a>	
 							</li>
@@ -119,7 +122,7 @@
 					<div class="col_one_third nobottommargin">
 						<div class="feature-box fbox-effect">
 							<div class="fbox-icon">
-								<a href="#"><i class="icon-line-head i-alt"></i></a>
+								<i class="icon-line-head i-alt"></i>
 							</div>
 							<h3>Community</h3>
 							<p>We teach people to code in a way that is accessible and nurturing. We are inclusive and encouraging, and we inspire people to tackle hard challenges.</p>
@@ -129,7 +132,7 @@
 					<div class="col_one_third nobottommargin">
 						<div class="feature-box fbox-effect">
 							<div class="fbox-icon">
-								<a href="#"><i class="icon-pencil i-alt"></i></a>
+								<i class="icon-pencil i-alt"></i>
 							</div>
 							<h3>Educational Organizations</h3>
 							<p>We provide remote programs that are bootcamp-style coding classes for community colleges, apprenticeship programs, and other educational groups.</p>
@@ -139,17 +142,93 @@
 					<div class="col_one_third nobottommargin col_last">
 						<div class="feature-box fbox-effect">
 							<div class="fbox-icon">
-								<a href="#"><i class="icon-line-briefcase i-alt"></i></a>
+								<i class="icon-line-briefcase i-alt"></i>
 							</div>
 							<h3>Businesses</h3>
 							<p>We produce job-ready applicants</p>
 						</div>
+					</div>										
+
+					<!-- button to trigger modal -->
+					<div class="col_full text-center nobottommargin">
+						<button class="button button-rounded button-large mt-5" data-toggle="modal" data-target="#modalContactForm">Request Information</button>
 					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="getInfo" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title w-100 font-weight-bold">What can we help you with?</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="contact-widget">		
+										<form class="nobottommargin" id="modal-contactform" name="modal-contactform" action="../../include/sendemail.php" method="post">											
+											<div class="col_full">
+												<textarea class="required form-control" id="modal-contactform-message" name="modal-contactform-message" placeholder="Message *" rows="4" cols="30"></textarea>
+											</div>
+				
+											<div class="col_half">				
+												<input type="text" id="modal-contactform-first-name" name="modal-contactform-first-name" placeholder="First Name *" class="form-control required" />
+											</div>
+				
+											<div class="col_half col_last">		
+												<input type="text" id="modal-contactform-last-name" name="template-contactform-last-name" placeholder="Last Name *" class="required form-control" />
+											</div>											
+				
+											<div class="col_half form-group">
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text icon-envelope-alt"></span> 
+													</div>				
+													<input type="email" id="modal-contactform-email" name="modal-contactform-email" placeholder="Email *" class="required email form-control" />
+												</div>
+											</div>											
+	
+											<div class="col_half col_last">
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text icon-phone3"></span>
+													</div>																
+													<input type="tel" id="modal-contactform-tel" name="modal-contactform-tel" placeholder="Phone (optional)" class="form-control"/>
+												</div>
+											</div>											
+											
+											<div class="col_full">
+												<div class="form-check form-check-inline">
+													<input id="individual" class="radio-style" type="radio" value="individual" name="ind-org" checked>
+													<label for="individual" class="radio-style-2-label">I am an individual</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input id="org" class="radio-style" type="radio" value="org" name="ind-org">
+													<label for="org" class="radio-style-2-label">I am part of a group</label>
+												</div>
+											</div>			 
+											
+											<div class="col_full">				
+												<input type="text" id="modal-contactform-org" name="modal-contactform-org" placeholder="Name of Organization" class="form-control hidden" />
+											</div>											
+				
+											<div class="col_full hidden">
+												<input type="text" id="modal-contactform-botcheck" name="modal-contactform-botcheck" value="" class="sm-form-control" />
+											</div>
+				
+											<div class="text-center">
+												<button class="button button-rounded button-large nomargin" type="submit" id="modal-contactform-submit" name="modal-contactform-submit" value="submit">Send</button>
+											</div>	
+										</form>
+									</div>									
+								</div>																
+							</div> <!-- modal-content end -->
+						</div>
+					</div> <!-- Modal end -->
 
 					<div class="clear"></div><div class="line"></div>
 					
 					<a class="anchor" id="testi"></a>
-					<div class="testi-container bottommargin-sm">
+					<div class="testi-container nobottommargin">
 						<h2>Testimonials</h2>			
 						<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="20" data-items="1" data-loop="true" data-autoplay="15000">
 
@@ -292,37 +371,44 @@
 					<div class="clear"></div><div class="line"></div>
 					<a class="anchor" id="contact"></a>
 					<div class="container">
-						<h2>Contact CodeSLO</h2>
-						<div class="contact-widget mt-5 divcenter" style="max-width: 900px">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2>Contact CodeSLO</h2>
+							</div>
+							<div class="col-sm-6" align="right">
+								<h3><span>info@codeslo.com</span></h3>
+							</div>
+						</div>	
+						<div class="contact-widget mt-3 divcenter">
 	
 							<div class="contact-form-result"></div>
 	
-							<form class="nobottommargin" id="template-contactform" name="template-contactform" action="add-contact" method="post">
+							<form class="nobottommargin" id="template-contactform" name="template-contactform" action="../../include/sendemail.php" method="post">
 	
 								<div class="form-process"></div>
 	
 								<div class="col_half">
 									<label class="nott" for="template-contactform-first-name">First Name <small>*</small></label>
-									<input type="text" id="template-contactform-first-name" name="first" value="" class="sm-form-control required" />
+									<input type="text" id="template-contactform-first-name" name="template-contactform-first-name" value="" class="sm-form-control required" />
 								</div>
 	
 								<div class="col_half col_last">
 									<label class="nott" for="template-contactform-last-name">Last Name <small>*</small></label>
-									<input type="text" id="template-contactform-last-name" name="last" value="" class="required sm-form-control" />
+									<input type="text" id="template-contactform-last-name" name="template-contactform-last-name" value="" class="required sm-form-control" />
 								</div>
 	
 								<div class="clear"></div>
 	
 								<div class="col_full">
 									<label class="nott" for="template-contactform-email">Email <small>*</small></label>
-									<input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" />
+									<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
 								</div>
 	
 								<div class="clear"></div>
 	
 								<div class="col_full">
 									<label class="nott" for="template-contactform-message">Message <small>*</small></label>
-									<textarea class="required sm-form-control" id="message" name="message" rows="6" cols="30"></textarea>
+									<textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
 								</div>
 	
 								<div class="col_full hidden">
@@ -371,22 +457,20 @@
 
 						<div class="col_half">
 							<div class="widget clearfix">
-								<img src="codeslo-custom/images/logo-white.png" alt="" class="footer-logo">
-
+								<img src="codeslo-custom/images/logo-white.png" alt="CodeSLO" class="footer-logo">
 								<p>CodeSLO is a company dedicated to an inclusive model of coding instruction.</p> 
 								<p>Our mission is to make learning to code as accessible as possible for the Central Coast and beyond.</p>
 								<p>We are educational innovators who are unafraid to try new ways to reveal and nurture our student’s talents.</p>
-
-								<!-- <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+								<div>
 									<address>
 										<strong>Headquarters:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
+										SLO HotHouse & Cal Poly CIE SBDC<br>
+										872 Higuera Street<br>
+										San Luis Obispo, CA 93401<br>
 									</address>
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-								</div> -->
+									<!-- <abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>								 -->
+									<h3><span>info@codeslo.com</span></h3>
+								</div>
 							</div>
 						</div>						
 
@@ -442,7 +526,7 @@
 							<div class="row center">
 
 								<div class="col-lg-12 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="500" data-to="828" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+									<div class="counter counter-small"><span data-from="500" data-to="836" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
 									<h5 class="nobottommargin">CodeSLO Members</h5>
 								</div>								
 
@@ -451,7 +535,7 @@
 						</div>
 
 						<div class="widget subscribe-widget clearfix">
-							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News:</h5>
+							<h5><strong>Subscribe</strong> to get important news from CodeSLO:</h5>
 							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
@@ -460,7 +544,7 @@
 									</div>
 									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
 									<div class="input-group-append">
-										<button class="btn btn-success" type="submit">Subscribe</button>
+										<button class="btn btn-theme" type="submit">Subscribe</button>
 									</div>
 								</div>
 							</form>
@@ -506,7 +590,7 @@
 						<!-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> -->
 					</div>
 
-					<div class="col_half col_last tright">
+					<!-- <div class="col_half col_last tright">
 						<div class="fright clearfix">
 							<a href="https://www.facebook.com/codeslo/" target="_blank" class="social-icon si-small si-borderless si-facebook">
 								<i class="icon-facebook"></i>
@@ -530,7 +614,7 @@
 						</div>
 						
 						<div class="clear"></div>						
-					</div>
+					</div> -->
 
 				</div>
 

@@ -10,6 +10,9 @@
 ::-webkit-selection { background:var(--colorA); }
 
 
+.btn-theme {
+	background: var(--colorA);	
+}
 a,
 h1 > span:not(.nocolor):not(.badge),
 h2 > span:not(.nocolor):not(.badge),
