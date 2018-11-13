@@ -1,0 +1,17 @@
+<% for(var i=0; i < locals.Testimonials.length; i++) { %>
+    <div class="oc-item">
+ <div class="testimonial">
+     <div class="testi-image">
+         <img src="<%= Testimonials[i].image.secure_url %>">
+     </div>
+     <div class="testi-content">
+         <p><%= Testimonials[i].quote %></p>
+         <div class="testi-meta">
+             <%= Testimonials[i].name %>
+             <span><%= Testimonials[i].title %></span>
+         </div>
+     </div>
+ </div>
+</div>
+
+<% } %>

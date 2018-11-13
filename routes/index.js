@@ -3,6 +3,7 @@ var importRoutes = keystone.importer(__dirname);
 
 var routes = {
   views: importRoutes('./views'),
+  partials: importRoutes('./views/partials'),
   api: importRoutes('./api'),
 };
 
