@@ -11,8 +11,19 @@
 
 
 .btn-theme {
-	background: var(--colorA);	
+	background-color: var(--colorA);	
 }
+
+.button-3d.button-theme:hover,
+.button-reveal.button-theme:hover,
+.button-border.button-theme:hover,
+.button-border.button-theme.button-fill:before { background-color:var(--colorA) !important; }
+
+.button-border.button-theme {
+	color: var(--colorA);
+	border-color: var(--colorA);
+}
+
 a,
 h1 > span:not(.nocolor):not(.badge),
 h2 > span:not(.nocolor):not(.badge),
@@ -90,7 +101,7 @@ h6 > span:not(.nocolor):not(.badge),
 .portfolio-shuffle:hover,
 .entry-link:hover,
 .sale-flash,
-.button:not(.button-white):not(.button-dark):not(.button-border):not(.button-black):not(.button-red):not(.button-teal):not(.button-yellow):not(.button-green):not(.button-brown):not(.button-aqua):not(.button-purple):not(.button-leaf):not(.button-pink):not(.button-blue):not(.button-dirtygreen):not(.button-amber):not(.button-lime),
+.button:not(.button-white):not(.button-dark):not(.button-border):not(.button-black):not(.button-red):not(.button-teal):not(.button-yellow):not(.button-green):not(.button-brown):not(.button-aqua):not(.button-purple):not(.button-leaf):not(.button-pink):not(.button-blue):not(.button-dirtygreen):not(.button-amber):not(.button-lime):not(.button-theme),
 .button.button-dark:hover,
 .promo.promo-flat,
 .feature-box .fbox-icon i,
@@ -134,7 +145,7 @@ input.switch-toggle-round:checked + label:before,
 .entry:after { background-color: var(--colorA); }
 
 .bgcolor,
-.button.button-3d:not(.button-white):not(.button-dark):not(.button-border):not(.button-black):not(.button-red):not(.button-teal):not(.button-yellow):not(.button-green):not(.button-brown):not(.button-aqua):not(.button-purple):not(.button-leaf):not(.button-pink):not(.button-blue):not(.button-dirtygreen):not(.button-amber):not(.button-lime):hover,
+.button.button-3d:not(.button-white):not(.button-dark):not(.button-border):not(.button-black):not(.button-red):not(.button-teal):not(.button-yellow):not(.button-green):not(.button-brown):not(.button-aqua):not(.button-purple):not(.button-leaf):not(.button-pink):not(.button-blue):not(.button-dirtygreen):not(.button-amber):not(.button-lime):not(.button-theme):hover,
 .process-steps li.active a,
 .process-steps li.ui-tabs-active a,
 .sidenav > .ui-tabs-active > a,
