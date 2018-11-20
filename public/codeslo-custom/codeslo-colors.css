@@ -14,6 +14,10 @@
 	background-color: var(--colorA);	
 }
 
+.button-theme {
+	background-color: var(--colorA);
+}
+
 .button-3d.button-theme:hover,
 .button-reveal.button-theme:hover,
 .button-border.button-theme:hover,
