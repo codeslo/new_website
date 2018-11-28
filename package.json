@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node keystone.js",
+    "start": "nodemon keystone.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/codeslo/new_website#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "keystone": "^4.0.0"
+    "keystone": "^4.0.0",
+    "nodemon": "^1.18.7"
   }
 }
