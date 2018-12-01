@@ -6,6 +6,7 @@ keystone.init({
   'cookie secret': 'secure string goes here',
   'name': 'new-website',
   'cookie secret': 'secure string goes here',
+  'mongo':'mongodb://matt-codeslo:NL6pmSEBiKKH8UKXrITgYWS94jwQuBhHe90qOjFXG83AwldEoWHvWHboB55SktsuQZYCtqgyIO1mhq4h8T4Wiw==@matt-codeslo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb',
   'user model': 'User',
   'auto update': true,
   'auth': true,
