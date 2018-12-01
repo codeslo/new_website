@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9a147be2-03d8-448a-9f73-17a5380f6a6d/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/codeslo-website",
+    "appService.deploySubpath": ""
+}
