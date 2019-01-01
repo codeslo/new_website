@@ -1,0 +1,21 @@
+Form: "contactform"
+
+Message: "contactform-message"
+
+First Name: "contactform-first"
+
+Last Name: "contactform-last"
+
+Email: "contactform-email"
+
+Phone: "contactform-tel" (optional)
+
+Subscribe Checkbox: "contactform-subscribe" (The value for this may need to be changed, right now it is "subscribed") 
+
+Individual or Organization Radio: "contactform-ind-org" (Both radios have the same name. The value for individual is "individual", the value for organization is "org".)
+
+Name of Organization: "contactform-org-name" (optional)
+
+Botcheck: "contactform-botcheck" (If this field has a value other than "", it was submitted by a bot.)
+
+Submit Button: "contactform-submit"

@@ -3,12 +3,16 @@ var keystone = require('keystone');
 var Contact = new keystone.List('Contact');
 
 Contact.add({
-  name: { type: keystone.Field.Types.Name, required: true, initial: true },
-  email: { type: keystone.Field.Types.Email, required: true, initial: true },
-  message: { type: keystone.Field.Types.Textarea, required: true, initial: true },
-  contactType:{type:keystone.Field.Types.Text, required: true, initial: true},
-  subscribed:{type:keystone.Field.Types.Boolean, required:true, initial:true}
+  FirstName:{type: keystone.Field.Types.Name,required:true,initial:true},
+  LastName:{type:keystone.Field.Types.Name,required:true,initial:true},
+  Email:{type:keystone.Field.Types.Email,required:true,initial:true},
+  Phone:{type:keystone.Field.Types.Text,required:false,initial:true},
+  Subscribed:{type:keystone.Field.Types.Boolean,required:true,initial:true},
+  ContactType:{type:keystone.Field.Types.Text,required:true,initial:true},
+  OrgName:{type:keystone.Field.Types.Text,required:false,initial:true},
+
+
 });
 
-Contact.defaultColumns = 'name, email, message';
+// Contact.defaultColumns = 'name, email, message';
 Contact.register();
