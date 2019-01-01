@@ -163,17 +163,17 @@
 								</div>
 								<div class="modal-body">
 									<div class="contact-widget">		
-										<form class="nobottommargin" id="modal-contactform" name="modal-contactform" action="../../include/sendemail.php" method="post">											
+										<form class="nobottommargin" id="modal-contactform" name="contactform" action="../../include/sendemail.php" method="post">											
 											<div class="col_full">
-												<textarea class="required form-control" id="modal-contactform-message" name="modal-contactform-message" placeholder="Message *" rows="4" cols="30"></textarea>
+												<textarea class="required form-control" id="modal-contactform-message" name="contactform-message" placeholder="Message *" rows="4" cols="30"></textarea>
 											</div>
 				
 											<div class="col_half">				
-												<input type="text" id="modal-contactform-first-name" name="modal-contactform-first-name" placeholder="First Name *" class="form-control required" />
+												<input type="text" id="modal-contactform-first-name" name="contactform-first" placeholder="First Name *" class="form-control required" />
 											</div>
 				
 											<div class="col_half col_last">		
-												<input type="text" id="modal-contactform-last-name" name="template-contactform-last-name" placeholder="Last Name *" class="required form-control" />
+												<input type="text" id="modal-contactform-last-name" name="contactform-last" placeholder="Last Name *" class="required form-control" />
 											</div>											
 				
 											<div class="col_half form-group">
@@ -181,7 +181,7 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text icon-envelope-alt"></span> 
 													</div>				
-													<input type="email" id="modal-contactform-email" name="modal-contactform-email" placeholder="Email *" class="required email form-control" />
+													<input type="email" id="modal-contactform-email" name="contactform-email" placeholder="Email *" class="required email form-control" />
 												</div>
 											</div>											
 	
@@ -190,31 +190,36 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text icon-phone3"></span>
 													</div>																
-													<input type="tel" id="modal-contactform-tel" name="modal-contactform-tel" placeholder="Phone (optional)" class="form-control"/>
+													<input type="tel" id="modal-contactform-tel" name="contactform-tel" placeholder="Phone (optional)" class="form-control"/>
 												</div>
 											</div>											
 											
 											<div class="col_full">
+												<div class="form-check pl-0 mb-2">
+													<input id="modal-subscribe" class="checkbox-style" type="checkbox" value="subscribed" name="contactform-subscribe" checked>
+													<label for="modal-subscribe" class="checkbox-style-3-label nobottommargin">Subscribe for the latest from CodeSLO</label>
+												</div>
 												<div class="form-check form-check-inline">
-													<input id="individual" class="radio-style" type="radio" value="individual" name="ind-org" checked>
+													<input id="individual" class="radio-style" type="radio" value="individual" name="contactform-ind-org" checked>
 													<label for="individual" class="radio-style-2-label">I am an individual</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input id="org" class="radio-style" type="radio" value="org" name="ind-org">
+													<input id="org" class="radio-style" type="radio" value="org" name="contactform-ind-org">
 													<label for="org" class="radio-style-2-label">I am part of a group</label>
-												</div>
+												</div>												
 											</div>			 
 											
 											<div class="col_full">				
-												<input type="text" id="modal-contactform-org" name="modal-contactform-org" placeholder="Name of Organization" class="form-control hidden" />
-											</div>											
-				
+												<input type="text" id="modal-contactform-org" name="contactform-org-name" placeholder="Name of Organization" class="form-control hidden"/>
+											</div>
+											
+											<%# this input is hidden, if it is filled out the form was submitted by a bot %>
 											<div class="col_full hidden">
-												<input type="text" id="modal-contactform-botcheck" name="modal-contactform-botcheck" value="" class="sm-form-control" />
+												<input type="text" id="modal-contactform-botcheck" name="contactform-botcheck" value="" class="sm-form-control"/>
 											</div>
 				
 											<div class="text-center">
-												<button class="button button-rounded button-large nomargin" type="submit" id="modal-contactform-submit" name="modal-contactform-submit" value="submit">Send</button>
+												<button class="button button-rounded button-large nomargin" type="submit" id="modal-contactform-submit" name="contactform-submit" value="submit">Send</button>
 											</div>	
 										</form>
 									</div>									
