@@ -5,15 +5,15 @@ var Contact = keystone.list('Contact');
 
 module.exports = function (req, res) {
   console.log(req.body);
-  if(!req.body.contactform-botcheck){
-    let contact = {};
-    contact.FirstName = req.body.contactform-first;
-    contact.LastName = req.body.contactform-last;
-    contact.Email = req.body.contactform-email;
-    contact.Phone = req.body.contactform-tel;
-    contact.Subscribed = req.body.contactform-subscribe;
-    contact.ContactType = req.body.contactform-ind-org;
-    contact.OrgName = req.body.contactform-org-name;
+  let contact = {};
+  if(!req.body.contactform_botcheck){
+    contact.FirstName = req.body.contactform_first;
+    contact.LastName = req.body.contactform_last;
+    contact.Email = req.body.contactform_email;
+    contact.Phone = req.body.contactform_tel;
+    contact.Subscribed = req.body.contactform_subscribe;
+    contact.ContactType = req.body.contactform_ind_org;
+    contact.OrgName = req.body.contactform_org_name;
   }else{
     console.log("Bot contact detected. No DB operations performed.");
   }
