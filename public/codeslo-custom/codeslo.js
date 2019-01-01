@@ -1,4 +1,4 @@
-$("input[name=ind-org]").change(function() {     
+$("input[name=contactform-ind-org]").change(function() {     
     if($("#individual").is(":checked")) {
         $("#modal-contactform-org").addClass("hidden");                		
     }
