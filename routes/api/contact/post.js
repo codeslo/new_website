@@ -1,10 +1,16 @@
 var keystone = require('keystone');
 var Contact = keystone.list('Contact');
 
+// save contact to DB
+
+// email contact to matt
+
 module.exports = function (req, res) {
-  req.body.name = {};
-  req.body.name.first = req.body.first;
-  req.body.name.last = req.body.last;
+  // req.body.name = {};
+  // req.body.name.first = req.body.first;
+  // req.body.name.last = req.body.last;
+  
+  
 
   var newContact = new Contact.model();
   console.log(newContact, req.body);
