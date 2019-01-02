@@ -7,7 +7,7 @@ Contact.add({
   LastName:{type:keystone.Field.Types.Name,required:true,initial:true},
   Email:{type:keystone.Field.Types.Email,required:true,initial:true},
   Phone:{type:keystone.Field.Types.Text,required:false,initial:true},
-  Subscribed:{type:keystone.Field.Types.Boolean,required:true,initial:true},
+  Subscribed:{type:keystone.Field.Types.Text,required:false,initial:true},
   ContactType:{type:keystone.Field.Types.Text,required:true,initial:true},
   OrgName:{type:keystone.Field.Types.Text,required:false,initial:true},
 

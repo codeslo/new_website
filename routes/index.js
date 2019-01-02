@@ -8,8 +8,8 @@ var routes = {
 };
 
 exports = module.exports = function (app) {
-  app.get('/', routes.views.index)
-  app.get('/contact-list', routes.views.contactList)
-  app.get('/add-contact', routes.views.addContact)
+  app.get('/', routes.views.index);
+  app.get('/contact-list', routes.views.contactList);
+  app.get('/add-contact', routes.views.addContact);
   app.post('/add-contact', routes.api.contact.post);
 };

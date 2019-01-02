@@ -4,7 +4,7 @@ var Contact = keystone.list('Contact');
 // save contact to DB
 
 module.exports = function (req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   let contact = {};
   if(!req.body.contactform_botcheck){
     contact.FirstName = req.body.contactform_first;
