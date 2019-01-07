@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/codeslo/new_website#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "ejs": "^2.6.1",
     "keystone": "^4.0.0",
-    "nodemon": "^1.18.7"
+    "nodemailer": "^5.0.0",
+    "nodemon": "^1.18.7",
+    "underscore": "^1.9.1"
   }
 }
