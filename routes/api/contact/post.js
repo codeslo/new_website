@@ -2,9 +2,7 @@ var keystone = require('keystone');
 var Contact = keystone.list('Contact');
 
 // save contact to DB
-
 module.exports = function (req, res) {
-  //console.log(req.body);
   let contact = {};
   if(!req.body.contactform_botcheck){
     contact.FirstName = req.body.contactform_first;
@@ -25,8 +23,9 @@ module.exports = function (req, res) {
       console.log(error);
       return res.send({ message: 'Error' });
     }
-    return res.send({ message: 'Message Sent!' });
-  });
+    req.flash('success', 'Thanks for contacting us, we\'ll get back to you soon.');
+    return  res.redirect("/");    
+  });  
 };
 
 // email contact to matt

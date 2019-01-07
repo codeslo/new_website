@@ -10,8 +10,6 @@ Contact.add({
   Subscribed:{type:keystone.Field.Types.Text,required:false,initial:true},
   ContactType:{type:keystone.Field.Types.Text,required:true,initial:true},
   OrgName:{type:keystone.Field.Types.Text,required:false,initial:true},
-
-
 });
 
 // Contact.defaultColumns = 'name, email, message';
