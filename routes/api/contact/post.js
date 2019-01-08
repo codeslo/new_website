@@ -21,10 +21,12 @@ module.exports = function (req, res) {
   Contact.updateItem(newContact, contact, function (error) {
     if (error) {
       console.log(error);
-      return res.send({ message: 'Error' });
+      req.flash('error', 'Something went wrong. You can email us at info@codeslo.com')
+      return res.redirect("/");
     }
-    req.flash('success', 'Thanks for contacting us, we\'ll get back to you soon.');
-    return  res.redirect("/");    
+    req.flash('success', 'We got your message and we\'ll respond soon. Thanks for contacting CodeSLO.');
+    return  res.redirect("/");
+    //return res.send({data:"got message"})    
   });  
 };
 
