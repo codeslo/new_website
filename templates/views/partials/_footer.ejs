@@ -86,18 +86,23 @@
 
             </div>
 
-            <div class="widget subscribe-widget clearfix">
+            <div class="widget clearfix">
                 <h5><strong>Subscribe</strong> to get important news from CodeSLO:</h5>
                 <div class="widget-subscribe-form-result"></div>
-                <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+                <form name="subscribe_form" action="/api/subscribe" role="form" method="post" class="nobottommargin">
                     <div class="input-group divcenter">
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="icon-email2"></i></div>
                         </div>
-                        <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                        <input type="email" name="subscribe_email" class="form-control email" placeholder="Enter your Email" required>
                         <div class="input-group-append">
                             <button class="btn btn-theme" type="submit">Subscribe</button>
                         </div>
+                    </div>
+
+                    <!-- botcheck: this input is hidden, if it is filled out the form was submitted by a bot -->
+					<div class="col_full hidden">
+                        <input type="text" id="modal-contactform-botcheck" name="subscribe_botcheck" value="" class="sm-form-control"/>
                     </div>
                 </form>
             </div>
@@ -138,7 +143,7 @@
     <div class="container clearfix">
 
         <div class="col_half">
-            Copyrights &copy; 2018 All Rights Reserved by CodeSLO<br>
+            Copyrights &copy; 2019 All Rights Reserved by CodeSLO<br>
             <!-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> -->
         </div>
 
