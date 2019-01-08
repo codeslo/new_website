@@ -9,6 +9,10 @@ a.anchor {
     max-width: 100% !important;
 }
 
+.flash-msgs {
+    font-size: large;
+}
+
 #slider p {
     font-weight: 500;
     color: #333333;
