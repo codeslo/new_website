@@ -1,0 +1,31 @@
+<% if (messages) {%>			
+
+    <div class="modal-on-load" data-target="#myModal1"></div>
+
+    <!-- Modal -->
+    <div class="modal1 mfp-hide" id="myModal1">
+        <div class="block divcenter" style="background-color: #FFF; max-width: 500px;">
+            <div class="center" style="padding: 20px;">
+                <% if(messages.success.length >= 1){ %>								
+                    <h3>Yay!</h3>
+                    <p class="nobottommargin flash-msgs"><%= messages.success %></p>
+                <% } %>	
+                <% if(messages.error.length >= 1){ %>								
+                    <h3>Uh oh!</h3>
+                    <p class="nobottommargin flash-msgs"><%= messages.error %></p>
+                <% } %>
+                <% if(messages.info.length >= 1){ %>								
+                    <h3></h3>
+                    <p class="nobottommargin flash-msgs"><%= messages.info %></p>
+                <% } %>
+                <% if(messages.warning.length >= 1){ %>								
+                    <h3></h3>
+                    <p class="nobottommargin flash-msgs"><%= messages.warning %></p>
+                <% } %>								
+            </div>
+            <div class="section center nomargin" style="padding: 30px;">
+                <a href="#" class="button button-rounded button-large" onClick="$.magnificPopup.close();return false;">Close</a>
+            </div>
+        </div>
+    </div>					
+<% } %>
