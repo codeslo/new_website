@@ -1,10 +1,10 @@
-<%// This is mostly for initial testing, this view and route will not be in the final site.%>
+<!-- This is mostly for initial testing, this view and route will not be in the final site. -->
 <h2>Contacts</h2>
 <ul>
   <% contacts.forEach(function(contact){ %>
     <li>
-      <div><%= contact.name.last + ', ' + contact.name.first + ': ' + contact.email%></div>
-      <div><%= contact.message %></div>
+      <div><%= contact.LastName + ', ' + contact.FirstName + ': ' + contact.Email%></div>
+      <!-- <div><%= contact.message %></div> -->
     </li>
   <% }); %>
 </ul>
