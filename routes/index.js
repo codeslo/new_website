@@ -8,7 +8,7 @@ keystone.pre('render', middleware.flashMessages);
 //Load routes
 var routes = {
   views: importRoutes('./views'),
-  partials: importRoutes('/views/partials'),
+  partials: importRoutes('./views/partials'),
   api: importRoutes('./api'),
 };
 
