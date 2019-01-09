@@ -9,8 +9,7 @@ if (port == null || port == "") {
 keystone.init({
   port: port,
   'cookie secret': 'secure string goes here',
-  'name': 'new-website',
-  'cookie secret': 'secure string goes here',
+  'name': 'new-website',  
   'mongo':'mongodb://matt-codeslo:NL6pmSEBiKKH8UKXrITgYWS94jwQuBhHe90qOjFXG83AwldEoWHvWHboB55SktsuQZYCtqgyIO1mhq4h8T4Wiw==@matt-codeslo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb',
   'user model': 'User',
   'auto update': true,
