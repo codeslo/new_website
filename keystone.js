@@ -1,8 +1,13 @@
 const keystone = require('keystone');
 //const ejs = require('ejs');
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 keystone.init({
+  port: port,
   'cookie secret': 'secure string goes here',
   'name': 'new-website',
   'cookie secret': 'secure string goes here',
