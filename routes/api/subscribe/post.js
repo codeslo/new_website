@@ -8,7 +8,7 @@ module.exports = function (req, res) {
     contact.FirstName = 'null';
     contact.LastName = 'null';
     contact.Email = req.body.subscribe_email;    
-    contact.Subscribed = 'subscribed';    
+    contact.Subscribed = 'true';    
   }else{
     console.log("Bot contact detected. No DB operations performed.");
   }
