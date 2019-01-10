@@ -1,9 +1,8 @@
 const keystone = require('keystone');
 
 if(process.env.NODE_ENV !== 'production') {
-  const config = require('./secrets');
+  var config = require('./secrets');
 }
-
 
 keystone.init({
   port: process.env.PORT || 3000,
@@ -16,21 +15,18 @@ keystone.init({
   'static':'public',
   views: 'templates/views',
   'view engine': 'ejs',
-  'cloudinary config': ({
+/*   'cloudinary config': ({
     cloud_name:'matt-codeslo',
     api_key: '637496429945961',
     api_secret: '4mmFlB9ZopZmnPSV4RZxlvzyIX0'
-  }),
-/*   'cloudinary config': ({
+  }), */
+  'cloudinary config': ({
     cloud_name:'matt-codeslo',
     api_key: process.env.CLOUDINARY_KEY || config.CLOUDINARY_KEY,
     api_secret: process.env.CLOUDINARY_KEY || config.CLOUDINARY_SECRET
-  }), */
+  }),
   'wysiwyg cloudinary images': true
-
 });
-
-console.log(process.env);
 
 keystone.import('models');
 keystone.set('routes', require('./routes'));
