@@ -2,4 +2,6 @@ node_modules/
 
 *.log
 
-models/temp.text
+updates/0.0.3-first-user.js
+
+models/testi.txt
