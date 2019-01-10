@@ -1,16 +1,12 @@
 const keystone = require('keystone');
-//const ejs = require('ejs');
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
+console.log(process.env);
 
 keystone.init({
-  port: port,
+  port: process.env.PORT || 3000,
   'cookie secret': 'secure string goes here',
-  'name': 'new-website',  
-  //'mongo':'mongodb://matt-codeslo:NL6pmSEBiKKH8UKXrITgYWS94jwQuBhHe90qOjFXG83AwldEoWHvWHboB55SktsuQZYCtqgyIO1mhq4h8T4Wiw==@matt-codeslo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb',
+  'name': 'new-website',
+  'mongo': process.env.MONGO_URI || 'mongodb://localhost:27017/cslo',  
   'user model': 'User',
   'auto update': true,
   'auth': true,
