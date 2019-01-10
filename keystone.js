@@ -1,4 +1,5 @@
 const keystone = require('keystone');
+const config = require('./secrets');
 
 keystone.init({
   port: process.env.PORT || 3000,
@@ -13,8 +14,8 @@ keystone.init({
   'view engine': 'ejs',
   'cloudinary config': ({
     cloud_name:'matt-codeslo',
-    api_key: '637496429945961',
-    api_secret: '4mmFlB9ZopZmnPSV4RZxlvzyIX0'
+    api_key: process.env.CLOUDINARY_KEY || config.CLOUDINARY_KEY,
+    api_secret: process.env.CLOUDINARY_KEY || config.CLOUDINARY_SECRET
   }),
   'wysiwyg cloudinary images': true
 
@@ -22,6 +23,4 @@ keystone.init({
 
 keystone.import('models');
 keystone.set('routes', require('./routes'));
-//keystone.set('cloudinary api key', '637496429945961');
-//keystone.set('cloudinary api secret', '4mmFlB9ZopZmnPSV4RZxlvzyIX0');
 keystone.start();
