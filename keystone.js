@@ -1,5 +1,5 @@
 const keystone = require('keystone');
-//const config = require('./secrets');
+const config = require('./secrets') || console.log("no secrets.js");
 
 keystone.init({
   port: process.env.PORT || 3000,
