@@ -15,11 +15,6 @@ keystone.init({
   'static':'public',
   views: 'templates/views',
   'view engine': 'ejs',
-/*   'cloudinary config': ({
-    cloud_name:'matt-codeslo',
-    api_key: '637496429945961',
-    api_secret: '4mmFlB9ZopZmnPSV4RZxlvzyIX0'
-  }), */
   'cloudinary config': ({
     cloud_name:'matt-codeslo',
     api_key: process.env.CLOUDINARY_KEY || config.CLOUDINARY_KEY,
