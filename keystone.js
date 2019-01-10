@@ -1,5 +1,9 @@
 const keystone = require('keystone');
-const config = require('./secrets') || console.log("no secrets.js");
+
+if(process.env.NODE_ENV !== 'production') {
+  const config = require('./secrets');
+}
+
 
 keystone.init({
   port: process.env.PORT || 3000,
@@ -25,6 +29,8 @@ keystone.init({
   'wysiwyg cloudinary images': true
 
 });
+
+console.log(process.env);
 
 keystone.import('models');
 keystone.set('routes', require('./routes'));
