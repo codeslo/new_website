@@ -22,6 +22,6 @@ keystone.init({
 
 keystone.import('models');
 keystone.set('routes', require('./routes'));
-keystone.set('cloudinary api key', '637496429945961');
-keystone.set('cloudinary api secret', '4mmFlB9ZopZmnPSV4RZxlvzyIX0');
+//keystone.set('cloudinary api key', '637496429945961');
+//keystone.set('cloudinary api secret', '4mmFlB9ZopZmnPSV4RZxlvzyIX0');
 keystone.start();
