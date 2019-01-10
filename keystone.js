@@ -6,7 +6,7 @@ keystone.init({
   port: process.env.PORT || 3000,
   'cookie secret': 'secure string goes here',
   'name': 'new-website',
-  'mongo': process.env.MONGO_URI || 'mongodb://localhost:27017/cslo',  
+  'mongo': process.env.MONGODB_URI || 'mongodb://localhost:27017/cslo',  
   'user model': 'User',
   'auto update': true,
   'auth': true,
