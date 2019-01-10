@@ -1,7 +1,5 @@
 const keystone = require('keystone');
 
-console.log(process.env);
-
 keystone.init({
   port: process.env.PORT || 3000,
   'cookie secret': 'secure string goes here',
