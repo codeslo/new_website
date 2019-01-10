@@ -52,7 +52,12 @@ a.anchor {
     margin: 0;
 }
 
-#footer p {
+.footer-widgets-wrap {
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+}
+
+.mission p {
     margin-bottom: 20px;
 }
 
