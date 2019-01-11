@@ -48,7 +48,8 @@ module.exports = function (req, res) {
     replyTo: req.body.contactform_email,
     to: 'codeslotest@gmail.com',
     envelope: {
-      from: req.body.contactform_email
+      from: req.body.contactform_email,
+      to: 'codeslotest@gmail.com'
     }, 
     subject: 'Email from CodeSLO contact form', 
     html: '<h3>From: </h3>'+req.body.contactform_first+' '+req.body.contactform_last+'<h3>Email: </h3>'+ req.body.contactform_email+'<h3>Message: </h3>'+req.body.contactform_message
@@ -59,7 +60,6 @@ module.exports = function (req, res) {
       return console.log(error);
     }
     console.log(info.response);
-
   });
 
 };
