@@ -19,6 +19,7 @@
   "homepage": "https://github.com/codeslo/new_website#readme",
   "dependencies": {
     "connect-flash": "^0.1.1",
+    "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "keystone": "^4.0.0",
     "nodemailer": "^5.0.0",

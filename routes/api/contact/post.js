@@ -1,8 +1,5 @@
 const keystone = require('keystone');
 const nodemailer = require('nodemailer');
-if(process.env.NODE_ENV !== 'production') {
-  var config = require('../../../secrets');  
-}
 const Contact = keystone.list('Contact');
 
 // save contact to DB
@@ -38,8 +35,8 @@ module.exports = function (req, res) {
   var transporter = nodemailer.createTransport({  
     service: 'gmail',
     auth: {
-           user: process.env.NODEMAILER_USER || config.NODEMAILER_USER,
-           pass: process.env.NODEMAILER_PASS || config.NODEMAILER_PASS
+           user: process.env.NODEMAILER_USER,
+           pass: process.env.NODEMAILER_PASS
        }
    });
 

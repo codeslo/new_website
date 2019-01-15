@@ -1,8 +1,5 @@
 const keystone = require('keystone');
-
-if(process.env.NODE_ENV !== 'production') {
-  var config = require('./secrets');
-}
+require('dotenv').config();
 
 keystone.init({
   port: process.env.PORT || 3000,
@@ -17,8 +14,8 @@ keystone.init({
   'view engine': 'ejs',
   'cloudinary config': ({
     cloud_name:'matt-codeslo',
-    api_key: process.env.CLOUDINARY_KEY || config.CLOUDINARY_KEY,
-    api_secret: process.env.CLOUDINARY_KEY || config.CLOUDINARY_SECRET
+    api_key: process.env.CLOUDINARY_KEY,
+    api_secret: process.env.CLOUDINARY_SECRET
   }),
   'wysiwyg cloudinary images': true
 });
