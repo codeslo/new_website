@@ -1,0 +1,51 @@
+
+    <div class="entry entry-latest clearfix nobottommargin">
+        <div class="entry-image">
+            <a href="<%= news[0].Image.secure_url %>" data-lightbox="image"><img class="image_fade" src="<%= news[0].Image.secure_url %>"></a>
+        </div>
+        <div class="entry-c">
+            <div class="entry-title">
+                <h2><span><%= news[0].Title %></span></h2>
+            </div>
+            <ul class="entry-meta clearfix">
+                <li><i class="icon-calendar3"></i><%= news[0].createdAt %></li>										
+                <%# <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li> %>										
+            </ul>
+            <div class="entry-content">
+                <p><%= news[0].Content %></p>
+            </div>
+        </div>
+    </div> <!-- .entry-latest End -->
+
+        
+    <div class="toggle">
+        <div class="togglet mb-4">
+            <i class="toggle-closed icon-chevron-down"></i>
+            <i class="toggle-open icon-chevron-up"></i>
+            More CodeSLO News
+        </div>
+        <div class="togglec p-0">
+            <% for(var i=1; i < locals.news.length; i++) { %>								
+            <div class="entry clearfix">
+            
+                <div class="entry-image">
+                    <a href="<%= news[i].Image.secure_url %>" data-lightbox="image"><img class="image_fade" src="<%= news[i].Image.secure_url %>"></a>
+                </div>
+                <div class="entry-c">
+                    <div class="entry-title">
+                        <h2><%= news[i].Title %></h2>
+                    </div>
+                    <ul class="entry-meta clearfix">
+                    <li><i class="icon-calendar3"></i><%= news[i].createdAt %></li>										
+                    <%# <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li> %>										
+                    </ul>
+                    <div class="entry-content">
+                        <p><%= news[i].Content %></p>										
+                    </div>
+                </div>
+            
+            </div> <!-- Entry End -->
+            <% } %>
+        </div>
+    </div> <!-- .toggle End -->
+    

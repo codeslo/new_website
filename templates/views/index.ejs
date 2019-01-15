@@ -73,6 +73,10 @@
 							<i class="icon-linkedin"></i>
 							<i class="icon-linkedin"></i>
 						</a>
+						<a href="https://www.meetup.com/codeslo/" class="social-icon inline-block si-small si-rounded si-dark si-mini si-meetup">
+							<i class="icon-meetup"></i>
+							<i class="icon-meetup"></i>
+						</a>
 						<a href="#contact" class="social-icon inline-block si-small si-rounded si-dark si-mini si-email3">
 							<i class="icon-email3"></i>
 							<i class="icon-email3"></i>
@@ -250,14 +254,21 @@
 					
 					<!-- Testiomonials -->				
 					<a class="anchor" id="testi"></a>
-					<div class="testi-container nobottommargin">									
-						<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="20" data-items="1" data-loop="true" data-autoplay="15000">
-							<%- include partials/_testimonials.ejs %>								
-						</div> <!-- #oc-testi end -->
-					</div><!-- .testi-container end -->					
+						<div class="testi-container nobottommargin">									
+							<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="20" data-items="1" data-loop="true" data-autoplay="15000">
+								<%- include partials/_testimonials.ejs %>								
+							</div> <!-- #oc-testi end -->
+						</div><!-- .testi-container end -->					
 					<div class="clear"></div><div class="line"></div>
-					<a class="anchor" id="contact"></a>					
 
+					<!-- News and Announcements -->
+					<div id="posts" class="small-thumbs">
+						<%- include partials/_news.ejs %>
+					</div><!-- #posts End -->
+
+					<div class="clear"></div><div class="line"></div>
+					
+					<a class="anchor" id="contact"></a>
 					<div class="container">						
 						<div class="row">
 							<button class="col-sm-3 button button-rounded button-xlarge button-theme" data-toggle="modal" data-target="#modalContactForm">								
