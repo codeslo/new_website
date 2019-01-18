@@ -5,6 +5,6 @@ module.exports = function (req, res) {
   locals = res.locals;
   locals.section = 'testimonials';
   view.query('Testimonials',keystone.list('Testimonial').model.find());
-  view.query('news',keystone.list('News').model.find().sort('-createdAt'));
+  view.query('news',keystone.list('News').model.find().sort('-createdAt').limit(4));
   view.render('index');
 };

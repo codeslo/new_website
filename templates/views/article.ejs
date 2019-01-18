@@ -1,0 +1,94 @@
+<% include partials/_header %>
+
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">        
+
+            <div class="single-post nobottommargin">
+
+                <!-- Single Post
+                ============================================= -->
+                <div class="entry clearfix">
+
+                    <!-- Entry Title
+                    ============================================= -->
+                    <div class="entry-title">
+                        <h2><%= article.Title %></h2>
+                    </div><!-- .entry-title end -->
+
+                    <!-- Entry Meta
+                    ============================================= -->
+                    <ul class="entry-meta clearfix">
+                        <li><i class="icon-calendar3"></i><%= article.createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                        
+                    </ul><!-- .entry-meta end -->
+
+                    <!-- Entry Content
+                    ============================================= -->
+                    <div class="entry-content notopmargin">
+
+                        <!-- Entry Image
+                        ============================================= -->
+                        <div class="entry-image alignleft">
+                            <img src="<%= article.Image.secure_url %>" alt="article image">
+                        </div><!-- .entry-image end -->
+                        
+                        <div>                        
+                            <%- article.Content %>
+                        </div>
+
+                        <!-- Post Single - Share
+                        ============================================= -->
+                        <div class="si-share noborder clearfix">
+                            <span>Share this Post:</span>
+                            <div>
+                                <a href="#" class="social-icon si-borderless si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-pinterest">
+                                    <i class="icon-pinterest"></i>
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-email3">
+                                    <i class="icon-email3"></i>
+                                    <i class="icon-email3"></i>
+                                </a>
+                            </div>
+                        </div><!-- Post Single - Share End -->
+
+                    </div>
+                </div><!-- .entry end -->                             
+
+            </div><!-- single post no bottom margin end -->
+
+        </div><!-- .container clearfix end -->
+
+    </div><!-- .content wrap end -->
+
+</section><!-- #content end -->
+        
+<!-- Footer
+============================================= -->
+<footer id="footer" class="dark">
+    <% include partials/_footer %>
+</footer><!-- #footer end -->
+
+<% include partials/_scripts %>
+
+</body>
+</html>
+
