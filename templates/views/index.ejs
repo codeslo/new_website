@@ -2,24 +2,24 @@
 
 		<section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix">
 
-				<div class="slider-parallax-inner">
-	
-					<div class="swiper-container swiper-parent">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide dark" alt="Bishop Peak; Credit: transformed image originally posted to Flickr by Leif Arne Storset - licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license" style="background-image: url('codeslo-custom/images/bishop.jpg');">
-								<div class="container clearfix">
-									<div class="slider-caption slider-caption-center">
-										<img data-animate="fadeInUp" src="codeslo-custom/images/codeslo-logo-grey.png" alt=" Welcome to CodeSLO">
-										<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Teaching the Central Coast to code.</p>
-									</div>
+			<div class="slider-parallax-inner">
+
+				<div class="swiper-container swiper-parent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dark" alt="Bishop Peak; Credit: transformed image originally posted to Flickr by Leif Arne Storset - licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license" style="background-image: url('codeslo-custom/images/bishop.jpg');">
+							<div class="container clearfix">
+								<div class="slider-caption slider-caption-center">
+									<img data-animate="fadeInUp" src="codeslo-custom/images/codeslo-logo-grey.png" alt=" Welcome to CodeSLO">
+									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Teaching the Central Coast to code.</p>
 								</div>
-							</div>							
-						</div>						
-					</div>
-	
+							</div>
+						</div>							
+					</div>						
 				</div>
-	
-			</section>
+
+			</div>
+
+		</section>
 
 		<!-- Content
 		============================================= -->
@@ -64,132 +64,64 @@
 					</div>										
 
 					<!-- button to trigger modal -->
-					<div class="col_full text-center nobottommargin">
+					<div class="col_full text-center mb-5">
 						<button class="button button-rounded button-border button-theme mt-5" data-toggle="modal" data-target="#modalContactForm">
 							<span>Request Information</span>
 						</button>
 					</div>
 
 					<!-- Modal -->
-					<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="getInfo" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title w-100 font-weight-bold">What can we help you with?</h4>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;
-									</button>
-								</div>
-								
-								<div class="modal-body">
-									<div>		
-										<form class="nobottommargin needs-validation" id="modal-contactform" name="contactform" action="/add-contact" method="post" novalidate>											
-											<div class="col_full">
-												<textarea class="form-control" id="modal-contactform-message" name="contactform_message" placeholder="Message *" rows="4" cols="30" required></textarea>
-												<div class="invalid-feedback">
-														Please let us know what we can help you with.
-												</div>
-											</div>
-				
-											<div class="col_half">				
-												<input type="text" id="modal-contactform-first-name" name="contactform_first" placeholder="First Name *" class="form-control" required/>
-												<div class="invalid-feedback">
-													Please provide your first name.
-												</div>
-											</div>
-				
-											<div class="col_half col_last">		
-												<input type="text" id="modal-contactform-last-name" name="contactform_last" placeholder="Last Name *" class="form-control" required/>
-												<div class="invalid-feedback">
-													Please provide your last name.
-												</div>
-											</div>											
-				
-											<div class="col_half form-group">
-												<div class="input-group">
-													<div class="input-group-prepend">
-														<span class="input-group-text icon-envelope-alt"></span> 
-													</div>				
-													<input type="email" id="modal-contactform-email" name="contactform_email" placeholder="Email *" class="email form-control" required/>
-													<div class="invalid-feedback">
-														Please use a valid email address.
-												  	</div>
-												</div>
-											</div>											
-	
-											<div class="col_half col_last">
-												<div class="input-group">
-													<div class="input-group-prepend">
-														<span class="input-group-text icon-phone3"></span>
-													</div>																
-													<input type="tel" id="modal-contactform-tel" name="contactform_tel" placeholder="Phone (optional)" class="form-control"/>
-												</div>
-											</div>											
-											
-											<div class="col_full">
-												<div class="form-check pl-0 mb-2">
-													<input id="modal-subscribe" class="checkbox-style" type="checkbox" value="true" name="contactform_subscribe" checked>
-													<label for="modal-subscribe" class="checkbox-style-3-label nobottommargin">Subscribe for the latest from CodeSLO</label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input id="individual" class="radio-style" type="radio" value="individual" name="contactform_ind_org" checked>
-													<label for="individual" class="radio-style-2-label">I am an individual</label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input id="org" class="radio-style" type="radio" value="org" name="contactform_ind_org">
-													<label for="org" class="radio-style-2-label">I am part of a group</label>
-												</div>												
-											</div>			 
-											
-											<div class="col_full">				
-												<input type="text" id="modal-contactform-org" name="contactform_org_name" placeholder="Name of Organization" class="form-control hidden"/>
-											</div>
-											
-											<!-- botcheck: this input is hidden, if it is filled out the form was submitted by a bot -->
-											<div class="col_full hidden">
-												<input type="text" id="modal-contactform-botcheck" name="contactform_botcheck" value="" class="sm-form-control"/>
-											</div>
-				
-											<div class="text-center">
-												<button class="button button-rounded button-large nomargin" type="submit" id="modal-contactform-submit" name="contactform_submit" value="submit" >Send</button>
-											</div>	
-										</form>
-									</div>									
-								</div>																
-							</div> <!-- modal-content end -->
-						</div>
-					</div> <!-- Modal end -->
+					<%- include partials/_contactModal %>
+					<!-- Modal end -->
 
-					<div class="clear"></div><div class="line"></div>
-					
-					<!-- Testiomonials -->				
+				</div> <!-- Services container end -->
+										
+				<!-- Testiomonials -->				
+				
+				<div class="section parallax nomargin notopborder" style="background-image: url('codeslo-custom/images/beach.jpg'); padding: 80px 0;" alt="Avila Beach; Credit: transformed image originally posted to Panoramio by Sergei Gussev - licensed under the Creative Commons Attribution 3.0 Unported" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;" >
 					<a class="anchor" id="testi"></a>
+					<div class="container clearfix">
+						<div class="heading-block center">
+							<h2>Testimonials</h2>
+						</div>
 						<div class="testi-container nobottommargin">									
-							<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="20" data-items="1" data-loop="true" data-autoplay="15000">
+							<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="20" data-items="1" data-loop="true" data-autoplay="15000" data-pagi="false">
 								<%- include partials/_testimonials.ejs %>								
 							</div> <!-- #oc-testi end -->
-						</div><!-- .testi-container end -->					
-					<div class="clear"></div><div class="line"></div>
+						</div><!-- .testi-container end -->
+					</div>
+				</div>					
 
-					<!-- News and Announcements -->
+				<!-- News and Announcements -->
+				<a class="anchor mt-5" id="news"></a>
+				<div class="container clearfix">
+					<div class="heading-block">
+						<h2>News</h2>
+						<span>Here's the latest from CodeSLO</span>
+					</div>					
 					<div id="posts" class="small-thumbs">
 						<%- include partials/_news.ejs %>
 					</div><!-- #posts End -->
+				</div>
 
-					<div class="clear"></div><div class="line"></div>
-					
-					<a class="anchor" id="contact"></a>
-					<div class="container">						
-						<div class="row">
-							<button class="col-sm-3 button button-rounded button-xlarge button-theme" data-toggle="modal" data-target="#modalContactForm">								
-								<span>Contact CodeSLO</span>
-							</button>
-							<div class="col-sm-8" align="right">
-								<h3><span>info@codeslo.com</span></h3>
-							</div>	
-						</div>												
-					</div>
-					<div class="line"></div>
-					<a class="anchor" id="partners"></a>
+				<div class="clear"></div><div class="line"></div>
+
+				<!-- Contact -->
+				<a class="anchor" id="contact"></a>
+				<div class="container mb-5">						
+					<div class="row">
+						<button class="col-sm-3 button button-rounded button-xlarge button-theme" data-toggle="modal" data-target="#modalContactForm">								
+							<span>Contact CodeSLO</span>
+						</button>
+						<div class="col-sm-8" align="right">
+							<h3><span>info@codeslo.com</span></h3>
+						</div>	
+					</div>												
+				</div>
+				
+				<!-- Partners -->
+				<a class="anchor" id="partners"></a>
+				<div class="container clearfix">
 					<div id="partners">
 						<h4 class="center">Our Partners</h4>
 						<div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-margin="30" data-nav="false" data-loop="true" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">	
@@ -200,11 +132,8 @@
 							<a href="https://wearehathway.com/" target="_blank"><img src="codeslo-custom/images/hathway.png" alt="Hathway"></a>
 							<a href="https://www.atascaderochamber.org/" target="_blank"><img src="codeslo-custom/images/acc.png" alt="Atascadero Chamber of Commerce"></a>							
 						</div>
-					</div>
-
-
-				</div>			
-
+					</div>		
+				</div><!--  Partners container end -->
 			</div><!-- .content-wrap end -->
 
 		</section><!-- #content end -->
