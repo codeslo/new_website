@@ -5,7 +5,7 @@
         </div>
         <div class="entry-c">
             <div class="entry-title">
-                <h2><span><%= news[0].Title %></span></h2>
+            <a href="/article/<%= news[0].slug %>"><h2><span><%= news[0].Title %></span></h2></a>
             </div>
             <ul class="entry-meta clearfix">
                 <li><i class="icon-calendar3"></i><%= news[0].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>										
@@ -34,7 +34,7 @@
                 </div>
                 <div class="entry-c">
                     <div class="entry-title">
-                        <h2><%= news[i].Title %></h2>
+                    <a href="/article/<%= news[i].slug %>"><h2><span><%= news[i].Title %></span></h2></a>
                     </div>
                     <ul class="entry-meta clearfix">
                     <li><i class="icon-calendar3"></i><%= news[i].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>										
