@@ -18,5 +18,5 @@ Testimonial.add({
     }
 });
 
-Testimonial.defaultColumns = 'name, title, quote, image';
+Testimonial.defaultColumns = 'name, title';
 Testimonial.register();
