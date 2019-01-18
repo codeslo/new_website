@@ -28,6 +28,7 @@ a.anchor {
     min-height: 140px;
     padding: 30px;
     margin: 0 60px;
+    background-color: rgba(255,255,255,.5)
 }
 
 .owl-nav button {
@@ -36,6 +37,10 @@ a.anchor {
 
 .testimonial p {
     font-size: 1rem;
+}
+
+.testimonial span {
+    color: #555
 }
 
 .testi-container .owl-stage {
