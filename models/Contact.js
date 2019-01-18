@@ -14,5 +14,5 @@ Contact.add({
   createdAt: {type:Types.Date, default:Date.now}
 });
 
-// Contact.defaultColumns = 'name, email, message';
+Contact.defaultColumns = 'FirstName, LastName, Email';
 Contact.register();
