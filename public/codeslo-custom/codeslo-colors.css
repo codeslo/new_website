@@ -9,6 +9,7 @@
 
 ::-webkit-selection { background:var(--colorA); }
 
+/* ----- From CodeSLO ----- */
 
 .btn-theme {
 	background-color: var(--colorA);	
@@ -28,6 +29,11 @@
 	border-color: var(--colorA);
 }
 
+.sub-nav li:hover {
+	background-color: var(--colorA);	
+}
+
+/* ----- From Canvas ----- */
 a,
 h1 > span:not(.nocolor):not(.badge),
 h2 > span:not(.nocolor):not(.badge),

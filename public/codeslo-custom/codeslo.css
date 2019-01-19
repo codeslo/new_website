@@ -9,6 +9,21 @@ a.anchor {
     max-width: 100% !important;
 }
 
+#header img {
+    max-height: 40px;
+}
+
+.sub-nav li:hover {
+    border-radius: 4px;
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+    transform: scale(1.1); 
+}
+
 .flash-msgs {
     font-size: large;
 }
