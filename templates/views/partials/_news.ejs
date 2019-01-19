@@ -8,40 +8,37 @@
             <a href="/article/<%= news[0].slug %>"><h2><span><%= news[0].Title %></span></h2></a>
             </div>
             <ul class="entry-meta clearfix">
-                <li><i class="icon-calendar3"></i><%= news[0].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>										
-                <%# <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li> %>										
+                <li><i class="icon-calendar3"></i><%= news[0].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                										
             </ul>
             <div class="entry-content">
-                <p><%- news[0].Content %></p>
+                <p><%- news[0].Content.substring(0, 750) %>...</p>
                 <a href="/article/<%= news[0].slug %>" class="more-link">Read More</a>
             </div>
         </div>
     </div> <!-- .entry-latest End -->
-
         
     <div class="toggle">
-        <div class="togglet mb-4">
+        <div class="togglet m-5">            
             <i class="toggle-closed icon-chevron-down"></i>
             <i class="toggle-open icon-chevron-up"></i>
-            More CodeSLO News
+            <h4>More CodeSLO News</h4>            
         </div>
-        <div class="togglec p-0">
+        <div class="togglec p-0 mt-5">
             <% for(var i=1; i < locals.news.length; i++) { %>								
             <div class="entry clearfix">
             
                 <div class="entry-image">
-                    <a href="<%= news[i].Image.secure_url %>" data-lightbox="image"><img class="image_fade" src="<%= news[i].Image.secure_url %>"></a>
+                    <a href="<%= news[i].Image.secure_url %>" data-lightbox="image"><img class="image_fade pb-5" src="<%= news[i].Image.secure_url %>"></a>
                 </div>
                 <div class="entry-c">
                     <div class="entry-title">
                     <a href="/article/<%= news[i].slug %>"><h2><span><%= news[i].Title %></span></h2></a>
                     </div>
                     <ul class="entry-meta clearfix">
-                    <li><i class="icon-calendar3"></i><%= news[i].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>										
-                    <%# <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li> %>										
+                    <li><i class="icon-calendar3"></i><%= news[i].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                    										
                     </ul>
                     <div class="entry-content">
-                        <p><%= news[i].Content %></p>
+                        <p><%= news[i].Content.substring(0, 400) %>...</p>
                         <a href="/article/<%= news[i].slug %>" class="more-link">Read More</a>										
                     </div>
                 </div>
