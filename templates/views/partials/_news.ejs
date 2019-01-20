@@ -18,10 +18,14 @@
     </div> <!-- .entry-latest End -->
         
     <div class="toggle">
-        <div class="togglet m-5">            
-            <i class="toggle-closed icon-chevron-down"></i>
-            <i class="toggle-open icon-chevron-up"></i>
-            <h4>More CodeSLO News</h4>            
+        <div class="togglet center p-0 m-5">            
+            <button class="button button-theme button-rounded button-border">
+                <i class="toggle-closed icon-chevron-down"></i>
+                <i class="toggle-open icon-chevron-up"></i>                
+                <span class="toggle-closed">More </span>
+                <span class="toggle-open">Less </span>
+                CodeSLO News
+            </button>           
         </div>
         <div class="togglec p-0 mt-5">
             <% for(var i=1; i < locals.news.length; i++) { %>								

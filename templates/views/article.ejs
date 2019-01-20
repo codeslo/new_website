@@ -2,7 +2,7 @@
 
 <section id="content">
 
-    <div class="content-wrap">
+    <div class="content-wrap pt-5">
 
         <div class="container clearfix">        
 
@@ -15,7 +15,7 @@
                     <!-- Entry Title
                     ============================================= -->
                     <div class="entry-title">
-                        <h2><%= article.Title %></h2>
+                        <h2><span><%= article.Title %></span></h2>
                     </div><!-- .entry-title end -->
 
                     <!-- Entry Meta
@@ -71,19 +71,14 @@
                         </div><!-- Post Single - Share End -->
 
                     </div>
-                </div><!-- .entry end -->
-                
-                <!-- Contact modal button -->
-                <div class="container">						
-                    <div class="row">
-                        <button class="col-sm-3 button button-rounded button-xlarge button-theme" data-toggle="modal" data-target="#modalContactForm">								
-                            <span>Contact CodeSLO</span>
-                        </button>
-                        <div class="col-sm-8" align="right">
-                            <h3><span>info@codeslo.com</span></h3>
-                        </div>	
-                    </div>												
-                </div>
+                </div><!-- .entry end -->                
+               
+               <!-- Contact -->				
+				<div class="promo promo-light pt-5 pb-5 bottommargin">
+						<h3> Questions? Comments? Email us today at <span><a href="" data-toggle="modal" data-target="#modalContactForm">info@codeslo.com</a></span></h3>
+						<span>We'd love to hear from you!</span>
+						<a href="" class="button button-xlarge button-theme button-rounded" data-toggle="modal" data-target="#modalContactForm">Contact CodeSLO</a>
+				</div>
 
                 <!-- Contact modal -->
                 <%- include partials/_contactModal %>

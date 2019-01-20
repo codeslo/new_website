@@ -72,9 +72,15 @@ a.anchor {
     margin-top: 0;
 }
 
-#partners h4 {
-    color: #777;
-    margin: 0;
+.toggle .togglet i{
+    line-height: unset;
+    position: relative;
+}
+.toggle .toggleta i.toggle-open {
+    display: inline-block;
+}
+.toggle .togglet:not(.toggleta) span.toggle-closed, .toggle .togglet.toggleta span.toggle-open {
+    display: inline-block;
 }
 
 .footer-widgets-wrap {
