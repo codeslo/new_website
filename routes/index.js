@@ -14,10 +14,8 @@ var routes = {
 
 //Bind routes
 exports = module.exports = function (app) {
-  app.get('/', routes.views.index);
-  app.get('/contact-list', routes.views.contactList);
-  app.get('/article/:slug', routes.views.article);
-  //app.get('/add-contact', routes.views.addContact);
+  app.get('/', routes.views.index);  
+  app.get('/article/:slug', routes.views.article);  
   app.post('/add-contact', routes.api.contact.post);  
   app.post('/api/subscribe', routes.api.subscribe.post);  
 };
