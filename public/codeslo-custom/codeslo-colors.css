@@ -33,6 +33,10 @@
 	background-color: var(--colorA);	
 }
 
+.home-nav .active {
+    color: var(--colorA) !important;
+}
+
 /* ----- From Canvas ----- */
 a,
 h1 > span:not(.nocolor):not(.badge),
