@@ -3,9 +3,9 @@ require('dotenv').config();
 
 keystone.init({
   port: process.env.PORT || 3000,
-  'cookie secret': 'secure string goes here',
+  'cookie secret': process.env.COOKIE_SECRET,
   'name': 'new-website',
-  'mongo': process.env.MONGODB_URI || 'mongodb://localhost:27017/cslo',  
+  'mongo': process.env.MONGODB_URI || 'mongodb://localhost:27017/csloweb',  
   'user model': 'User',
   'auto update': true,
   'auth': true,
