@@ -2,8 +2,26 @@ var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
-//Middleware
+//Common Middleware
 keystone.pre('render', middleware.flashMessages);
+keystone.pre('routes', middleware.initLocals);
+//keystone.pre('routes', middleware.initErrorHandlers);
+
+keystone.set('500', function(err, req, res, next) {
+  var title, message;
+  if (err instanceof Error) {
+      message = err.message;
+      err = err.stack;
+  }
+  console.log(err, title, message);
+  req.flash('error', 'Something went wrong, sorry about that. You can try again later.');
+  res.redirect('/');
+});
+
+keystone.set('404', function(req, res, next) {
+  req.flash('error', 'We can\'t find that page right now. Sorry about that!');
+  res.redirect('/');
+});
 
 //Load routes
 var routes = {

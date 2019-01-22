@@ -1,5 +1,6 @@
 
     <div class="entry entry-latest clearfix nobottommargin">
+    <% if(news[0]){ %>
         <div class="entry-image">
             <a href="<%= news[0].Image.secure_url %>" data-lightbox="image"><img class="image_fade" src="<%= news[0].Image.secure_url %>"></a>
         </div>
@@ -15,6 +16,7 @@
                 <a href="/article/<%= news[0].slug %>" class="more-link">Read More</a>
             </div>
         </div>
+    <% }; %>    
     </div> <!-- .entry-latest End -->
         
     <div class="toggle">
@@ -31,8 +33,14 @@
             <% for(var i=1; i < locals.news.length; i++) { %>								
             <div class="entry clearfix">
             
-                <div class="entry-image">
-                    <a href="<%= news[i].Image.secure_url %>" data-lightbox="image"><img class="image_fade pb-5" src="<%= news[i].Image.secure_url %>"></a>
+                <div class="entry-image">                
+                    <% if(news[i].Image.secure_url){ %>
+                        <a href="<%= news[i].Image.secure_url %>" data-lightbox="image">            
+                            <img src="<%= news[i].Image.secure_url %>">
+                        </a>
+                    <% } else { %>
+                        <img src="/codeslo-custom/images/codeslo-logo-grey.png">        
+                    <% }; %>                  
                 </div>
                 <div class="entry-c">
                     <div class="entry-title">
@@ -42,7 +50,7 @@
                     <li><i class="icon-calendar3"></i><%= news[i].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                    										
                     </ul>
                     <div class="entry-content">
-                        <p><%= news[i].Content.substring(0, 400) %>...</p>
+                        <p><%- news[i].Content.substring(0, 400) %>...</p>
                         <a href="/article/<%= news[i].slug %>" class="more-link">Read More</a>										
                     </div>
                 </div>

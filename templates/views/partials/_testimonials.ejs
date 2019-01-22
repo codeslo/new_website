@@ -2,7 +2,11 @@
     <div class="oc-item">
  <div class="testimonial">
      <div class="testi-image">
-         <img src="<%= Testimonials[i].image.secure_url %>">
+        <% if(Testimonials[i].image.secure_url){ %>            
+             <img src="<%= Testimonials[i].image.secure_url %>">
+        <% } else { %>
+            <img src="/codeslo-custom/images/testimonials/testimonial-head.jpg">        
+        <% }; %>         
      </div>
      <div class="testi-content">
          <p><%= Testimonials[i].quote %></p>
