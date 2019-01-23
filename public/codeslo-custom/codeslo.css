@@ -72,6 +72,10 @@ a.anchor {
     min-height: 115px;
 }
 
+.entry-content p {
+    text-align: justify;
+}
+
 .entry-latest:after {
     height: 0;
     margin-top: 0;

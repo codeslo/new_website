@@ -12,7 +12,7 @@
                 <li><i class="icon-calendar3"></i><%= news[0].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                										
             </ul>
             <div class="entry-content">
-                <p><%- news[0].Content.substring(0, 750) %>...</p>
+                <p><%- news[0].Content.substring(0, 600) %>...</p>
                 <a href="/article/<%= news[0].slug %>" class="more-link">Read More</a>
             </div>
         </div>
@@ -20,7 +20,7 @@
     </div> <!-- .entry-latest End -->
         
     <div class="toggle">
-        <div class="togglet center p-0 m-5">            
+        <div class="togglet center p-0 mt-4 mb-5">            
             <button class="button button-theme button-rounded button-border">
                 <i class="toggle-closed icon-chevron-down"></i>
                 <i class="toggle-open icon-chevron-up"></i>                
