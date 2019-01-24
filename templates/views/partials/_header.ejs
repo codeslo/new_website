@@ -3,7 +3,27 @@
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
+	<meta name="author" content="CodeSLO" />
+
+	<!-- Open Graph Protocol
+	============================================= -->
+	<% if(locals.view === 'article-view' ){ %>
+		<meta property="og:url" content="/article/<%= article.slug %>"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:title" content="<%= article.Title %>"/>
+		<meta property="og:description" content="<%= article.Content.substring(0,250) %>"/>
+		<meta property="og:image" content="<%= article.Image.secure_url %>"/>
+		
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<% } %>
 
 	<!-- Stylesheets
 	============================================= -->
