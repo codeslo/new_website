@@ -1,8 +1,40 @@
+<!-- Open Graph Protocol
+============================================= -->
+<%# !!!!! og:url NEEDS CONFIG !!!!! %>
+<%# !!!!! og:description NEEDS FIX !!!!! %>
+<meta property="og:url" content="https://codeslo.herokuapp.com/article/<%= article.slug %>"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="<%= article.Title %>"/>
+<meta property="og:description" content="<%- article.Content.substring(0,250) %>"/>
+<meta property="og:image" content="<%= article.Image.secure_url %>"/>
+
+<!-- Load Facebook SDK for JavaScript -->
+<%# !!!!! FB.init NEEDS CONFIG !!!!! %>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        appId            : '124285848214697',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v2.10'
+        });
+        FB.AppEvents.logPageView();
+    };
+    
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));    
+</script>
+
 <% include partials/_header %>
 
 <section id="content">
 
-    <div class="content-wrap pt-5">
+    <div class="content-wrap pt-5 pb-0">
 
         <div class="container clearfix">        
 
@@ -34,19 +66,19 @@
                             <img src="<%= article.Image.secure_url %>" alt="article image">
                         </div><!-- .entry-image end -->
                         
-                        <div>                        
+                        <div class="article-content">                        
                             <%- article.Content %>
                         </div>
 
                         <!-- Post Single - Share
                         ============================================= -->
-                        <div class="si-share noborder clearfix">
-                            <span>Share this Post:</span>
+                        <div class="si-share clearfix">
+                            <span>Share this Post:</span>                            
                             <div>
-                                <div class="social-icon si-borderless si-facebook fb-share-button" data-href="https://www.your-domain.com/your-page.html">
+                                <a id="shareBtn" class="social-icon si-borderless si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
-                                </div>
+                                </a>
                                 <a href="#" class="social-icon si-borderless si-twitter">
                                     <i class="icon-twitter"></i>
                                     <i class="icon-twitter"></i>
@@ -57,6 +89,18 @@
                                 </a>
                             </div>
                         </div><!-- Post Single - Share End -->
+
+                        <%# !!!!! href NEEDS CONFIG !!!!! %>
+                        <%# !!!!! MOVE TO SCRIPTS AFTER CONFIG !!!!! %>
+                        <script>
+                            document.getElementById('shareBtn').onclick = function() {
+                                FB.ui({
+                                method: 'share',
+                                display: 'popup',
+                                href: 'https://codeslo.com/article/',
+                                }, function(response){});
+                            }
+                        </script>
 
                     </div>
                 </div><!-- .entry end -->                

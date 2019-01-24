@@ -76,6 +76,10 @@ a.anchor {
     text-align: justify;
 }
 
+.article-content p {
+    font-size: 1rem;
+}
+
 .entry-latest:after {
     height: 0;
     margin-top: 0;
