@@ -48,12 +48,24 @@ window.fbAsyncInit = function() {
   fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
+function getMeta(metaName) {
+  const metas = document.getElementsByTagName('meta');
+
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('property') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }  
+  return '';
+}
+
+let articleLink = getMeta('og:url');
+
 //  <%# !!!!! href NEEDS CONFIG !!!!! %>
-//<%# !!!!! MOVE TO SCRIPTS AFTER CONFIG !!!!! %>
 document.getElementById('shareBtn').onclick = function() {
   FB.ui({
   method: 'share',
   display: 'popup',
-  href: 'https://codeslo.herokuapp.com/',
+  href: articleLink,
   }, function(response){});
 };
