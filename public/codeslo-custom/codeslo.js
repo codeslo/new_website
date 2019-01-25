@@ -1,3 +1,4 @@
+//Add organization name field to contact modal when organization is selected
 $("input[name=contactform_ind_org]").change(function() {     
     if($("#individual").is(":checked")) {
         $("#modal-contactform-org").addClass("hidden");                		
@@ -26,10 +27,8 @@ $("input[name=contactform_ind_org]").change(function() {
       });
     }, false);
   })();
-
   
-//<!-- Load Facebook SDK for JavaScript -->
-//<%# !!!!! FB.init NEEDS CONFIG !!!!! %>  
+//Initialize and setup Facebook SDK   
 window.fbAsyncInit = function() {
   FB.init({
   appId            : '327597658099100',
@@ -40,32 +39,21 @@ window.fbAsyncInit = function() {
   FB.AppEvents.logPageView();
 };
 
+// Load Facebook SDK for JavaScript
 (function(d, s, id){
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+}(document, 'script', 'facebook-jssdk'));
 
-function getMeta(metaName) {
-  const metas = document.getElementsByTagName('meta');
-
-  for (let i = 0; i < metas.length; i++) {
-    if (metas[i].getAttribute('property') === metaName) {
-      return metas[i].getAttribute('content');
-    }
-  }  
-  return '';
-}
-
-let articleLink = getMeta('og:url');
-
-//  <%# !!!!! href NEEDS CONFIG !!!!! %>
+//FB Share button popup
+let articleLink = document.querySelector("meta[property='og:url']").getAttribute("content");
 document.getElementById('shareBtn').onclick = function() {
   FB.ui({
   method: 'share',
   display: 'popup',
-  href: articleLink,
+  href: articleLink
   }, function(response){});
 };
