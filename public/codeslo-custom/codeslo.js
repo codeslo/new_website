@@ -32,7 +32,7 @@ $("input[name=contactform_ind_org]").change(function() {
 //<%# !!!!! FB.init NEEDS CONFIG !!!!! %>  
 window.fbAsyncInit = function() {
   FB.init({
-  appId            : '124285848214697',
+  appId            : '327597658099100',
   autoLogAppEvents : true,
   xfbml            : true,
   version          : 'v2.10'
@@ -54,6 +54,6 @@ document.getElementById('shareBtn').onclick = function() {
   FB.ui({
   method: 'share',
   display: 'popup',
-  href: 'https://codeslo.com/article/',
+  href: 'https://codeslo.herokuapp.com/',
   }, function(response){});
 };
