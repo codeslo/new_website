@@ -1,5 +1,4 @@
-
-    <div class="entry entry-latest clearfix nobottommargin">
+<div class="entry entry-latest clearfix nobottommargin">
     <% if(news[0]){ %>
         <div class="entry-image">
             <a href="<%= news[0].Image.secure_url %>" data-lightbox="image"><img class="image_fade" src="<%= news[0].Image.secure_url %>"></a>
@@ -17,46 +16,46 @@
             </div>
         </div>
     <% }; %>    
-    </div> <!-- .entry-latest End -->
+</div> <!-- .entry-latest End -->
         
-    <div class="toggle">
-        <div class="togglet center p-0 mt-4 mb-5">            
-            <button class="button button-theme button-rounded button-border">
-                <i class="toggle-closed icon-chevron-down"></i>
-                <i class="toggle-open icon-chevron-up"></i>                
-                <span class="toggle-closed">More </span>
-                <span class="toggle-open">Less </span>
-                CodeSLO News
-            </button>           
-        </div>
-        <div class="togglec p-0 mt-5">
-            <% for(var i=1; i < locals.news.length; i++) { %>								
-            <div class="entry clearfix">
-            
-                <div class="entry-image">                
-                    <% if(news[i].Image.secure_url){ %>
-                        <a href="<%= news[i].Image.secure_url %>" data-lightbox="image">            
-                            <img src="<%= news[i].Image.secure_url %>">
-                        </a>
-                    <% } else { %>
-                        <img src="/codeslo-custom/images/codeslo-logo-grey.png">        
-                    <% }; %>                  
+<div class="toggle">
+    <div class="togglet center p-0 mt-4 mb-5">            
+        <button class="button button-theme button-rounded button-border">
+            <i class="toggle-closed icon-chevron-down"></i>
+            <i class="toggle-open icon-chevron-up"></i>                
+            <span class="toggle-closed">More </span>
+            <span class="toggle-open">Less </span>
+            CodeSLO News
+        </button>           
+    </div>
+    <div class="togglec p-0 mt-5">
+        <% for(var i=1; i < locals.news.length; i++) { %>								
+        <div class="entry clearfix">
+        
+            <div class="entry-image">                
+                <% if(news[i].Image.secure_url){ %>
+                    <a href="<%= news[i].Image.secure_url %>" data-lightbox="image">            
+                        <img src="<%= news[i].Image.secure_url %>">
+                    </a>
+                <% } else { %>
+                    <img src="/codeslo-custom/images/codeslo-logo-grey.png">        
+                <% }; %>                  
+            </div>
+            <div class="entry-c">
+                <div class="entry-title">
+                <a href="/article/<%= news[i].slug %>"><h2><span><%= news[i].Title %></span></h2></a>
                 </div>
-                <div class="entry-c">
-                    <div class="entry-title">
-                    <a href="/article/<%= news[i].slug %>"><h2><span><%= news[i].Title %></span></h2></a>
-                    </div>
-                    <ul class="entry-meta clearfix">
-                    <li><i class="icon-calendar3"></i><%= news[i].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                    										
-                    </ul>
-                    <div class="entry-content">
-                        <p><%- news[i].Content.substring(0, 400) %>...</p>
-                        <a href="/article/<%= news[i].slug %>" class="more-link">Read More</a>										
-                    </div>
+                <ul class="entry-meta clearfix">
+                <li><i class="icon-calendar3"></i><%= news[i].createdAt.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) %></li>                    										
+                </ul>
+                <div class="entry-content">
+                    <p><%- news[i].Content.substring(0, 400) %>...</p>
+                    <a href="/article/<%= news[i].slug %>" class="more-link">Read More</a>										
                 </div>
-            
-            </div> <!-- Entry End -->
-            <% } %>
-        </div>
-    </div> <!-- .toggle End -->
+            </div>
+        
+        </div> <!-- Entry End -->
+        <% } %>
+    </div>
+</div> <!-- .toggle End -->
     

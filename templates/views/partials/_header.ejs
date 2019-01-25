@@ -5,10 +5,16 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="CodeSLO" />
 
-	<!-- Open Graph Protocol
-	============================================= -->
-	<% if(locals.view === 'article-view' ){ %>
-		<% console.log("locals.view is: "+locals.view) %>
+	<%# Open Graph Protocol
+	============================================= %>
+	<%# !!!!! og:url NEEDS CONFIG !!!!! %>
+	<%# !!!!! og:description NEEDS FIX !!!!! %>
+	<% if(locals.view === 'article-view' ){ %>		
+		<meta property="og:url" content="https://codeslo.herokuapp.com/article/<%= article.slug %>"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:title" content="<%= article.Title %>"/>		
+		<meta property="og:image" content="<%= article.Image.secure_url %>"/>
+		<meta property="og:description" content="THIS NEEDS TO CHANGE"/>		
 	<% } %>
 
 	<!-- Stylesheets
