@@ -8,7 +8,8 @@
 	<%# Open Graph Protocol for articles
 	============================================= %>
 	<%# !!!!! og:url NEEDS CONFIG !!!!! %>	
-	<% if(locals.view === 'article-view' ){ %>		
+	<% if(locals.view === 'article-view' ){ %>
+		<meta property="fb:app_id" content="327597658099100"/>		
 		<meta property="og:url" content="https://codeslo.herokuapp.com/article/<%= article.slug %>"/>
 		<meta property="og:type" content="article"/>
 		<meta property="og:title" content="<%= article.Title %>"/>		
