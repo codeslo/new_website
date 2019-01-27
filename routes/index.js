@@ -5,7 +5,7 @@ var importRoutes = keystone.importer(__dirname);
 //Common Middleware
 keystone.pre('render', middleware.flashMessages);
 keystone.pre('routes', middleware.initLocals);
-//keystone.pre('routes', middleware.initErrorHandlers);
+keystone.pre('routes', middleware.initErrorHandlers);
 
 keystone.set('500', function(err, req, res, next) {
   var title, message;
@@ -18,9 +18,11 @@ keystone.set('500', function(err, req, res, next) {
   res.redirect('/');
 });
 
-keystone.set('404', function(req, res, next) {
-  req.flash('error', 'We can\'t find that page right now. Sorry about that!');
-  res.redirect('/');
+keystone.set('404', function(req, res, next) {  
+  // req.flash('error', 'We can\'t find that page right now. Sorry about that!');
+  // res.redirect('/');
+  // next();
+  res.notfound();
 });
 
 //Load routes

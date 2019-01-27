@@ -15,7 +15,7 @@ exports.initLocals = function(req, res, next) {
 exports.initErrorHandlers = function(req, res, next) {
     
     res.err = function(err, title, message) {
-        res.status(500).render('errors/500', {
+        res.status(500).send({
             err: err,
             errorTitle: title,
             errorMsg: message
@@ -23,7 +23,7 @@ exports.initErrorHandlers = function(req, res, next) {
     }
     
     res.notfound = function(title, message) {
-        res.status(404).render('errors/404', {
+        res.status(404).send({
             errorTitle: title,
             errorMsg: message
         });
