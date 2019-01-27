@@ -19,9 +19,6 @@ keystone.set('500', function(err, req, res, next) {
 });
 
 keystone.set('404', function(req, res, next) {  
-  // req.flash('error', 'We can\'t find that page right now. Sorry about that!');
-  // res.redirect('/');
-  // next();
   res.notfound();
 });
 

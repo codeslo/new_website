@@ -23,11 +23,9 @@ exports.initErrorHandlers = function(req, res, next) {
     }
     
     res.notfound = function(title, message) {
-        res.status(404).send({
-            errorTitle: title,
-            errorMsg: message
-        });
-    }
+        req.flash('error', 'We can\'t find that page right now. Sorry about that!');
+        res.redirect('/');  
+    };
     
     next();
     
