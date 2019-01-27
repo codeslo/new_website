@@ -13,9 +13,7 @@ keystone.set('500', function(err, req, res, next) {
       message = err.message;
       err = err.stack;
   }
-  console.log(err, title, message);
-  req.flash('error', 'Something went wrong, sorry about that. You can try again later.');
-  res.redirect('/');
+  res.err(err, title, message);
 });
 
 keystone.set('404', function(req, res, next) {  

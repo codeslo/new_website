@@ -15,12 +15,11 @@ exports.initLocals = function(req, res, next) {
 exports.initErrorHandlers = function(req, res, next) {
     
     res.err = function(err, title, message) {
-        res.status(500).send({
-            err: err,
-            errorTitle: title,
-            errorMsg: message
-        });
-    }
+        res.status(500);
+        console.log(err, title, message);
+        req.flash('error', 'Something went wrong, sorry about that. You can try again later.');
+        res.redirect('/');        
+    };
     
     res.notfound = function(title, message) {
         req.flash('error', 'We can\'t find that page right now. Sorry about that!');
