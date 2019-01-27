@@ -32,7 +32,7 @@ var routes = {
 
 //Bind routes
 exports = module.exports = function (app) {
-  app.get('/', routes.views.index);  
+  app.get('/', routes.views.index);   
   app.get('/article/:slug', routes.views.article);  
   app.post('/add-contact', routes.api.contact.post);  
   app.post('/api/subscribe', routes.api.subscribe.post);  

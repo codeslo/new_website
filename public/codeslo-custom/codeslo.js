@@ -49,11 +49,15 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 //FB Share button popup
-let articleLink = document.querySelector("meta[property='og:url']").getAttribute("content");
-document.getElementById('shareBtn').onclick = function() {
-  FB.ui({
-  method: 'share',
-  display: 'popup',
-  href: articleLink
-  }, function(response){});
-};
+if(document.querySelector("meta[property='og:url']")){  
+  let articleLink = document.querySelector("meta[property='og:url']").getAttribute("content");
+  document.getElementById('shareBtn').onclick = function() {
+    FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: articleLink
+    }, function(response){});
+  };
+}
+
+
