@@ -52,7 +52,7 @@
                             </div>
                         </div>											
                         
-                        <div class="col_full">
+                        <div class="col_half">
                             <div class="form-check pl-0 mb-2">
                                 <input id="modal-subscribe" class="checkbox-style" type="checkbox" value="true" name="contactform_subscribe" checked>
                                 <label for="modal-subscribe" class="checkbox-style-3-label nobottommargin">Subscribe for the latest from CodeSLO</label>
@@ -65,7 +65,20 @@
                                 <input id="org" class="radio-style" type="radio" value="org" name="contactform_ind_org">
                                 <label for="org" class="radio-style-2-label">I am part of a group</label>
                             </div>												
-                        </div>			 
+                        </div>
+                        <%# <div class="col_half col_last">
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6Lfqlp4UAAAAAJpCEKENlH1OENRoc9kjslgIyplT">
+                                </div>
+                                <div id="recaptcha-error" class="invalid-captcha hidden">
+                                    Please check the box.
+                                </div>
+                            </div>
+                        </div>			  %>
+                        <div class="g-recaptcha col_half col_last"
+                            data-sitekey="6Lcvmp4UAAAAAArCaQZZg8RFycWpg1MpMmA-DcJG"
+                            data-callback="onSubmit">
+                        </div>
                         
                         <div class="col_full">				
                             <input type="text" id="modal-contactform-org" name="contactform_org_name" placeholder="Name of Organization" class="form-control hidden"/>
@@ -74,7 +87,7 @@
                         <!-- botcheck: this input is hidden, if it is filled out the form was submitted by a bot -->
                         <div class="col_full hidden">
                             <input type="text" id="modal-contactform-botcheck" name="contactform_botcheck" value="" class="sm-form-control"/>
-                        </div>
+                        </div>                        
 
                         <div class="text-center">
                             <button class="button button-rounded button-large nomargin" type="submit" id="modal-contactform-submit" name="contactform_submit" value="submit" >Send</button>
