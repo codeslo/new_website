@@ -19,6 +19,7 @@ module.exports = function(req, res) {
     body = JSON.parse(body);
 
     if (body.success !== undefined && !body.success) {
+      console.log(body.success);
       req.flash(
         "error",
         "Something went wrong. Google thinks you are a robot. If you're human you can email us at info@codeslo.com"
