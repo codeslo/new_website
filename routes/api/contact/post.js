@@ -5,7 +5,7 @@ const request = require("request");
 
 // save contact to DB
 module.exports = function(req, res) {
-  const secretKey = "6Lcvmp4UAAAAAEIYkd6KLXowE6gZJeKPELDZV_Uh";
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
   const verificationURL =
     "https://www.google.com/recaptcha/api/siteverify?secret=" +
