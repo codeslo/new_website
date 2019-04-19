@@ -21,12 +21,17 @@ $("input[name=contactform_ind_org]").change(function() {
         form.addEventListener(
           "submit",
           function(event) {
-            if (form.checkValidity() === false) {
+            if (
+              form.checkValidity() === false ||
+              grecaptcha.getResponse() === ""
+            ) {
               event.preventDefault();
               event.stopPropagation();
-            } else {
-              console.log("was validated");
-              grecaptcha.execute();
+              if (grecaptcha.getResponse() === "") {
+                document
+                  .getElementById("recaptcha-check")
+                  .classList.remove("hidden");
+              }
             }
             form.classList.add("was-validated");
           },
@@ -37,12 +42,6 @@ $("input[name=contactform_ind_org]").change(function() {
     false
   );
 })();
-
-//submit contact form with recaptcha
-const onSubmit = function(response) {
-  // send response to backend
-  document.getElementById("modal-contactform").submit();
-};
 
 //Initialize and setup Facebook SDK
 window.fbAsyncInit = function() {
