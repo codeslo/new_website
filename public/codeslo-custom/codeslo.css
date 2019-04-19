@@ -1,153 +1,161 @@
 a.anchor {
-    display: block;
-    position: relative;
-    top: -80px;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
 }
 
 #header .container {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
 
 #header img {
-    max-height: 40px;
+  max-height: 40px;
 }
 
 .sub-nav li:hover {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
-.grow { 
-    transition: all .2s ease-in-out; 
+.grow {
+  transition: all 0.2s ease-in-out;
 }
-.grow:hover { 
-    transform: scale(1.1); 
+.grow:hover {
+  transform: scale(1.1);
 }
 
 .flash-msgs {
-    font-size: large;
+  font-size: large;
 }
 
 #slider p {
-    font-weight: 500;
-    color: #333333;
-    text-shadow: none;
+  font-weight: 500;
+  color: #333333;
+  text-shadow: none;
+}
+
+.invalid-captcha {
+  color: red;
 }
 
 #testi-div {
-    background-image: url('images/beach-wide.jpg');
-    padding: 80px 0;   
+  background-image: url("images/beach-wide.jpg");
+  padding: 80px 0;
 }
 
-.testi-image, .testi-image img {
-    height: 12%;
-    width: 12%;    
+.testi-image,
+.testi-image img {
+  height: 12%;
+  width: 12%;
 }
 
 .testimonial {
-    min-height: 140px;
-    padding: 30px;
-    margin: 0 60px;
-    background-color: rgba(255,255,255,.5)
+  min-height: 140px;
+  padding: 30px;
+  margin: 0 60px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .owl-nav button {
-    margin: 60px;
+  margin: 60px;
 }
 
 .testimonial p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .testimonial span {
-    color: #555
+  color: #555;
 }
 
 .testi-container .owl-stage {
-    padding: 0;
+  padding: 0;
 }
 
 .testi-content {
-    padding-left: 20px;
-    min-height: 115px;
+  padding-left: 20px;
+  min-height: 115px;
 }
 
 .entry-content p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .article-content p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .entry-latest:after {
-    height: 0;
-    margin-top: 0;
+  height: 0;
+  margin-top: 0;
 }
 
-.toggle .togglet i{
-    line-height: unset;
-    position: relative;
+.toggle .togglet i {
+  line-height: unset;
+  position: relative;
 }
 .toggle .toggleta i.toggle-open {
-    display: inline-block;
+  display: inline-block;
 }
-.toggle .togglet:not(.toggleta) span.toggle-closed, .toggle .togglet.toggleta span.toggle-open {
-    display: inline-block;
+.toggle .togglet:not(.toggleta) span.toggle-closed,
+.toggle .togglet.toggleta span.toggle-open {
+  display: inline-block;
 }
 
 .footer-widgets-wrap {
-    padding-top: 60px !important;
-    padding-bottom: 20px !important;
+  padding-top: 60px !important;
+  padding-bottom: 20px !important;
 }
 
 .mission p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
-    max-width: 180px;
-    margin-bottom: 20px;
+  max-width: 180px;
+  margin-bottom: 20px;
 }
 
-.btn-theme {	
-	color: white;
+.btn-theme {
+  color: white;
 }
 .btn-theme :hover {
-	font-weight: bold
+  font-weight: bold;
 }
 
 .si-meetup:hover,
-.si-colored.si-meetup { background-color: #F5405F !important; }
-
-@media(max-width: 768px){
-    .testi-image, .testi-image img {
-        float: none;
-        height: 40%;
-        width: 40%; 
-        margin: 0 auto 10px;   
-    }
-    
-    .testimonial {        
-        padding: 20px;
-        margin: 0;
-        
-    }
-    .testimonial p {
-        font-size: .875rem;
-    }
-    
-    .owl-nav button {
-        margin: 0;
-    }
-
-    .owl-dots {
-        display: none;
-    }
+.si-colored.si-meetup {
+  background-color: #f5405f !important;
 }
 
-@media(max-width: 1290px) {
-    #testi-div {
-        background-image: url('images/beach.jpg');           
-    }
+@media (max-width: 768px) {
+  .testi-image,
+  .testi-image img {
+    float: none;
+    height: 40%;
+    width: 40%;
+    margin: 0 auto 10px;
+  }
+
+  .testimonial {
+    padding: 20px;
+    margin: 0;
+  }
+  .testimonial p {
+    font-size: 0.875rem;
+  }
+
+  .owl-nav button {
+    margin: 0;
+  }
+
+  .owl-dots {
+    display: none;
+  }
+}
+
+@media (max-width: 1290px) {
+  #testi-div {
+    background-image: url("images/beach.jpg");
+  }
 }
